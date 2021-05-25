@@ -1,0 +1,52 @@
+[
+  {
+    "country": "AUD",
+    "currency" : 1.2879881851000985
+  },
+
+  {
+    "country": "CAD",
+    "currency" : 1.2044634066294715
+  },
+
+  {
+    "country": "EUR",
+    "currency" : 0.8204791598293403
+  },
+
+  {
+    "country": "USD",
+    "currency" : 1.0
+  },
+
+  {
+    "country": "JPY",
+    "currency" : 108.80374138496883
+  },
+
+  {
+    "country": "DKK",
+    "currency" : 6.101247128322941
+  },
+
+  {
+    "country": "GBP",
+    "currency" : 0.7045454545454545
+  },
+
+  {
+    "country": "HUF",
+    "currency" : 286.437479488021
+  },
+
+  {
+    "country": "PLN",
+    "currency" : 3.6832950443058747
+  },
+
+  {
+    "country": "KRW",
+    "currency" : 1126.5589104036756
+  }
+
+]
