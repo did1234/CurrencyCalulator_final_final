@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Currency Calculator</string>
+    <string name="input">Input</string>
+    <string name="calculate">Calculate</string>
+    <string name="currency_calculator">Currency Calculator</string>
+    <string name="output">Output</string>
+    <string name="result">Result</string>
+    <string name="convert_to">Convert To</string>
+
+
 </resources>
