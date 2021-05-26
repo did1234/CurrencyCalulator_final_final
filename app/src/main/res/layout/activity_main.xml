@@ -89,7 +89,7 @@
         android:id="@+id/button_calculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#232327"
+        android:background="#17130B"
         android:backgroundTint="#9C6161"
         android:text="@string/calculate"
         android:textColor="#FFFFFF"

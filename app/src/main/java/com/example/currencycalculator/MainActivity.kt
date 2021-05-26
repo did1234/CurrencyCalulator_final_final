@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //variables
+        //initialized variables
         var inputSpinnerText = ""
         var outputSpinnerText = ""
         inputSpinner = findViewById<Spinner>(R.id.inputSpinner)
@@ -35,13 +35,14 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        //gson
+        //moving json file from the raw folder into val currencyList by using gson
         val inputStream = resources.openRawResource(R.raw.currency)
         val jsonString = inputStream.bufferedReader().use {
             it.readText()
         }
         val gson = Gson()
         val jsonDataType = object : TypeToken<List<Currencies>>() {}.type
+
         val currencyList = gson.fromJson<List<Currencies>>(jsonString, jsonDataType)
 
 
@@ -49,14 +50,16 @@ class MainActivity : AppCompatActivity() {
         button_calculate.setOnClickListener {
             inputSpinnerText = inputSpinner.selectedItem.toString()
             outputSpinnerText = outputSpinner.selectedItem.toString()
+
             var inputCurrencyRatio = 0.0
             var outputCurrencyRatio = 0.0
+
             var index = 0
             var index1 = 0
             var inputValue = editTextNumber_input.text.toString().toDouble()
             var resultValue = 0.0
 
-            //Finds the currency ratio for selected inputSpinner
+            //Finds the currency for selected countries
             while(index < currencyList.size) {
                 if(currencyList[index].country == inputSpinnerText) {
                     inputCurrencyRatio = currencyList[index].currency
@@ -72,6 +75,7 @@ class MainActivity : AppCompatActivity() {
                 index1++
             }
 
+            // calculates the currencies
             // result = (inputValue) * (Currency 2 Ratio) / (Currency 1 Ratio)
                 resultValue = (inputValue) * outputCurrencyRatio / inputCurrencyRatio
                 textView_result.text = resultValue.toString() + " " + outputSpinnerText
